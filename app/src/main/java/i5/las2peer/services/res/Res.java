@@ -93,19 +93,21 @@ public class Res extends RESTService {
    *
    * 
    * @param id  a String
+   * @param name  a String
+
    * 
    * @return Response 
    * 
    */
   @GET
-  @Path("/test/{id}")
+  @Path("/test/{id}/{name}")
   @Produces(MediaType.APPLICATION_JSON)
   @Consumes(MediaType.TEXT_PLAIN)
   @ApiResponses(value = {
        @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "res")
   })
   @ApiOperation(value = "gettest", notes = " ")
-  public Response gettest(@PathParam("id") String id) {
+  public Response gettest(@PathParam("id") String id, @PathParam("name") String name) {
 
 
 
